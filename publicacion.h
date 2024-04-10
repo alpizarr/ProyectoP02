@@ -1,24 +1,27 @@
 
 #ifndef publicacion_h
 #define publicacion_h
-
+#include <iostream>
+using namespace std;
+#include "usuario.h"
+#include "redsocial.h"
 
 class Publicacion {
 private:
   int id;
-  string contenido;
-  Usuario* autor;
 
 public:
-  Publicacion(int id, string contenido, Usuario* autor);
+  string contenido;
+  string fecha;
+  Usuario* Usuario;
 
-  int getId() { return id; }
+  Publicacion(Usuario* user, string date, string cont);
 
-  void mostrar();
+  void mostrarPublicacion();
 
   // ... (otras funcionalidades)
 };
 
 #endif
 
-#endif
+
